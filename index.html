@@ -29,6 +29,51 @@
         .modal {
             backdrop-filter: blur(4px);
         }
+
+         /* Responsif tambahan untuk mobile */
+         @media (max-width: 640px) {
+         nav .flex.justify-between {
+      flex-direction: column;
+      align-items: start;
+      gap: 0.5rem;
+         }
+
+        #refreshBtn span {
+      display: none; /* tampilkan hanya ikon di HP */
+         }
+
+         .absolute.left-1\/2 {
+      position: static !important;
+      transform: none !important;
+      justify-content: center;
+      margin-top: 0.5rem;
+         }
+
+         .text-4xl {
+      font-size: 1.5rem !important;
+         }
+
+         .text-2xl {
+      font-size: 1.25rem !important;
+         }
+
+      .text-lg {
+      font-size: 1rem !important;
+        }
+
+         table th, table td {
+      padding: 0.5rem !important;
+      font-size: 0.85rem !important;
+         }
+
+         #tabContent {
+      padding: 1rem !important;
+         }
+
+         #galeriGrid {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+         }
+         }
     </style>
 </head>
 <body class="bg-gradient-to-br from-emerald-600 to-white islamic-pattern min-h-screen">
@@ -44,7 +89,7 @@
                 </div>
 
                 <!-- Tombol Refresh (Tengah Atas) -->
-                <div class="absolute top-4 left-1/2 transform -translate-x-1/2 flex items-center">
+                <div class="mt-2 flex justify-center sm:absolute sm:top-4 sm:left-1/2 sm:-translate-x-1/2 sm:transform">
                     <button id="refreshBtn" class="bg-emerald-600 hover:bg-emerald-700 text-white px-3 py-1 rounded-lg shadow-lg transition-colors duration-200 flex items-center">
                         <i class="fas fa-sync-alt mr-2"></i>
                         <span>Refresh Data</span>
@@ -58,7 +103,7 @@
                             <i class="fas fa-sign-out-alt mr-1"></i>Logout
                         </button>
                     </div>
-                    <button id="loginBtn" class="bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-2 rounded">
+                    <button id="loginBtn" class="bg-emerald-600 hover:bg-emerald-700 text-white px-3 py-1 rounded">
                         <i class="fas fa-sign-in-alt mr-1"></i>Login Admin
                     </button>
                 </div>
@@ -70,16 +115,16 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <!-- Header -->
         <div class="relative mb-8" 
-             style="background-image: url('yelow.png'); 
+             style="background-image: url(''); 
                     background-size: cover; 
                     background-position: center;">
-            <!-- Logo Musholla (Kiri) -->
-           <div class="absolute left-2 top-1 flex items-center"> 
-                <div class="p-2 rounded-full bg-blue-100"> 
-                    <img src="https://i.ibb.co.com/JwzP9XyJ/mnf-bulat.png" 
-                        alt="Logo MNF" 
-                        width="90" height="90" 
-                        class="rounded-full">
+            
+          <!-- Logo MNF Responsif -->
+            <div class="absolute left-2 top-1 flex items-center sm:left-4 sm:top-2">
+                <div class="p-2 sm:p-3 flex items-center justify-center">
+                    <img src="https://i.ibb.co.com/W4rmSh0f/white-mnf2.png"
+                    alt="Logo MNF"
+                    class="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 rounded-full object-cover" />
                 </div>
             </div>
 
